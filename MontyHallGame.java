@@ -1,3 +1,9 @@
+/**
+* <This is the Monty Hall door game>
+* @author Ami Gianchandani
+* 
+*/
+
 import java.util.Scanner;
 public class MontyHallGame
 {
@@ -101,9 +107,6 @@ public class MontyHallGame
 		return r;
 
 	}
-	
-	
-	
 
 
 }
