@@ -19,6 +19,11 @@ public class MontyHallGame
 	
 	}
 	
+	/**
+	* <description> what? how?
+	* 
+	*
+	*/
 	public static void welcome()
 	{
 		System.out.println("Monty Hall Game");
@@ -34,10 +39,15 @@ public class MontyHallGame
 		int car = (int) (Math.random() * 3 + 1);
 		
 		//testing
-		System.out.println("CAR = " + car);
+		//System.out.println("CAR = " + car);
 		
 		System.out.print("Please choose a door: 1, 2, or 3:  ");
 		int user_choice = kb.nextInt();
+// 		if (user_choice > 3)
+// 		{
+// 			System.out.print("Please choose a door: 1, 2, or 3:  ");
+// 			int user_choice = kb.nextInt();	
+// 		}
 		
 		//get rid of new line from buffer
 		kb.nextLine();
@@ -65,13 +75,19 @@ public class MontyHallGame
 		{
 			System.out.println("You Win!");
 		}
-		else
+		else  //TODO: can put in anything but yes for no
 		{
 			System.out.println("Sorry! You Lose!!");
 		}
 		
 	}
 	
+	/**
+	* This method chooses the remaining door, not the user choice and not the door revealed that the user would switch to 
+	* @param int c determines which door the car is in
+	* @param int u assigns the users choice to a door
+	* @return the door that isn't the users choice or the one with the car
+	*/
 
 	public static int remainingDoor(int c, int u)
 	{
@@ -86,13 +102,13 @@ public class MontyHallGame
 				
 		}
 		return 1;
-
 	}
 	
 	/**
-	* This method chooses either door, not just the first door
-	*
-	*
+	* This method chooses either door, not just the first door as which door to reveal 
+	* @param int c determines which door the car is in
+	* @param int u assigns the users choice to a door
+	* @return the door that isn't the users choice or the one with the car
 	*/
 	
 	
@@ -105,8 +121,5 @@ public class MontyHallGame
 			r = (int) (Math.random()* 3 + 1);
 		}
 		return r;
-
 	}
-
-
 }
